@@ -1,0 +1,29 @@
+:
+:
+categories: id, name
+:
+:
+
+:
+:
+appartient, 11 products, 0N categories
+:
+:
+
+images: id, name, url
+représentant, 0N products, 01 images
+products: id, name, category, price, quantity_in_stock, favorite, date_added
+contenir1, 0N products, 0N carts
+carts: id, quantity
+
+:
+de, 1N products, 11 package_sizes
+appartenir2, 0N products, 1N orders
+:
+appartenir1, 01 users, 11 carts
+
+package_sizes: id, name
+contenir2, 0N package_sizes, 11 orders
+orders: id, quantity, date
+effectuer, 11 orders, 0N users
+users: id, first_name, last_name, email, password, date_registered

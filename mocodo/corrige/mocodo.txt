@@ -1,0 +1,19 @@
+﻿:
+lier, 1N< thé, 0N> packaging: ref, price
+packaging: id, package
+:
+
+noter, 0N< utilisateur, 0N> thé : vote_count
+thé: id, label_1, label_2, description, url_tea, url_image, vote_average, our_favorite
+avoir, 11< thé, 0N> catégorie
+catégorie: id, label, description, url_image
+
+utilisateur: id, label, email, password, role, created_at
+inclure, 1N< commande, 0N> thé :  quantity, ref product
+:
+:
+
+passer, 0N< utilisateur, 11> commande
+commande: id, total_amount, order_date
+:
+:
