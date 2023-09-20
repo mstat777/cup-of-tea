@@ -12,14 +12,10 @@ const PORT = process.env.PORT || process.env.LOCAL_PORT;
 
 const app = express();
 
-app.use(cors())
-    .use(express.static("public"))
-    .use(session({
-        secret: process.env.SK,
-        resave: false,
-        saveUninitialized: false
-    }))
-    .use(setSession)
+app.use(express.static("public"))
+    .use(cors())
+    .use(express.urlencoded({ extended: true }))
+    .use(express.json())
     .use(router);
 
 app.listen(PORT, () => console.log(`running on http://localhost:${PORT}`));
